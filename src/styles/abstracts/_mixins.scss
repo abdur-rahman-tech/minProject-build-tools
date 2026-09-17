@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+// Reusable Flexbox Alignment Mixin
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+
+// Dynamic Button Styling Mixin
+@mixin button-theme($bg, $color: #ffffff) {
+    background-color: $bg;
+    color: $color;
+    border: none;
+    padding: ($spacing-base * 0.75) ($spacing-base * 1.5);
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+}

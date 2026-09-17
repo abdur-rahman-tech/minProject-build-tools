@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    // Selector Nesting
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $primary-color;
+    }
+
+    &__links {
+        a {
+            margin-left: 1.5rem;
+            color: $text-dark;
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

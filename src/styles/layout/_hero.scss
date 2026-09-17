@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+    @include flex-center(column);
+    padding: 5rem 2rem;
+    background-color: $bg-light;
+    text-align: center;
+
+    &__title {
+        font-family: $font-stack;
+        font-size: 2.75rem;
+        color: $text-dark;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        font-size: 1.25rem;
+        color: lighten($text-dark, 20%);
+        margin-bottom: 2rem;
+    }
+}
+
+.btn--primary {
+    @include button-theme($primary-color);
+}
