@@ -13,3 +13,10 @@
         "vite": "^5.4.21"
     }
 }
+"scripts": {
+  "dev": "vite",
+  "build": "vite",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
